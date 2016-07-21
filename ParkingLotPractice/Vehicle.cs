@@ -9,6 +9,9 @@ namespace ParkingLotPractice
     public abstract class Vehicle
     {
         public string LicensePlate {get; set;}
-        protected int Cost {get; set;}
+        public int Cost {get; set;}
     }
 }
+
+
+

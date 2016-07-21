@@ -18,62 +18,67 @@ namespace ParkingLotPractice
 
             while (UserType!=0)
             {
-                Console.WriteLine("Press \n 1: for Motorcycle \n 2: for Car \n 3: for Van \n 4: for Bus \n 5: for Truck\nPress 0 to exit.");
+                Console.WriteLine("Press \n 1: for Motorcycle \n 2: for Car \n 3: for Van \n 4: for Bus \n 5: for Truck\nPress anything other key to exit.");
 
                 int.TryParse(Console.ReadKey().KeyChar.ToString(), out UserType);
-                           
-                switch (UserType)
-                {
-                    case 1:
-                        Console.WriteLine("\nYou've chosen a Motorcycle");
-                        y = new Motorcycle();
-                        break;
-                    case 2:
-                        Console.WriteLine("\nYou've chosen a Car");
 
-                        break;
-                    case 3:
-                        Console.WriteLine("\nYou've chosen a Van");
-                        break;
-                    case 4:
-                        Console.WriteLine("\nYou've chosen a Bus");
-                        break;
-                    case 5:
-                        Console.WriteLine("\nYou've chosen a Truck");
-                        break;
-                    default:
-                        Console.WriteLine("\n Input error");
-                        break;
+                if (UserType != 0)
+                {
+                    switch (UserType)
+                    {
+                        case 1:
+                            y = new Motorcycle();
+                            Console.WriteLine("\nYou want to park a Motorcycle, the cost is " + y.Cost);
+                            break;
+                        case 2:
+                            y = new Car();
+                            Console.WriteLine("\nYou want to park a Car, the cost is " + y.Cost);
+                            break;
+                        case 3:
+                            y = new Van();
+                            Console.WriteLine("\nYou want to park a Van, the cost is " + y.Cost);
+                            break;
+                        case 4:
+                            y = new Bus();
+                            Console.WriteLine("\nYou want to park a Bus, the cost is " + y.Cost);
+                            break;
+                        case 5:
+                            y = new Truck();
+                            Console.WriteLine("\nYou want to park a Motorcycle, the cost is " + y.Cost);
+                            break;
+                        default:
+                            Console.WriteLine("\n Input error");
+                            break;
+                    }
                 }
 
-                Console.WriteLine("\nType in license plate, can't be longer than 8 characters");
-
-                License = Console.ReadLine().ToString();
-                while (License.Length > 8)
-                {
-                    Console.WriteLine("License plate too long, must be shorter than 8 characters\nType in license plate:");
-                    License = Console.ReadLine().ToString();
-                }
-                y.LicensePlate = License;
                 if (y!=null)
-                { 
-                    if (PLot.InsertVehicle(y, UserType)==true)
+                {
+                    int slot = PLot.GetParkingSlot(UserType);
+                    Console.WriteLine("\nWe have spots available. Please type in your license plate, can't be longer than 8 characters");
+
+                    License = Console.ReadLine().ToString();
+                    while (License.Length > 8)
                     {
-                        Console.WriteLine("Your vehicle has been parked"); 
+                        Console.WriteLine("License plate too long, must be shorter than 8 characters\nType in license plate:");
+                        License = Console.ReadLine().ToString();
                     }
-                    else
+                    if (PLot.LicensePlatesExists(License) != true)
                     {
-                        Console.WriteLine("No available spots for this type of vehicle, please select a different type");
+                        y.LicensePlate = License;
+                        PLot.InsertVehicle(y, UserType);
+                        Console.WriteLine("Your vehicle has been parked");
                     }
-                    
+
+                       
+                       
                 }
-                
-
+                else
+                {
+                    Console.WriteLine("No available spots for this type of vehicle, please select a different type");
+                }
             }
-            
-                     
-
-
         }
     }
 }
+

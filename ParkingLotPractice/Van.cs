@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace ParkingLotPractice
 {
-    class Motorcycle:Vehicle
+    class Van : Vehicle
     {
-        public Motorcycle()
+        public Van()
         {
-            base.Cost = 500;
+            base.Cost = 2000;
         }
-       
     }
 }

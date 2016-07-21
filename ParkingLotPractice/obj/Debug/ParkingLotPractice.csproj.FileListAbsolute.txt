@@ -4,3 +4,9 @@ c:\users\alfredo\documents\visual studio 2015\Projects\ParkingLotPractice\Parkin
 c:\users\alfredo\documents\visual studio 2015\Projects\ParkingLotPractice\ParkingLotPractice\bin\Debug\ParkingLotPractice.pdb
 c:\users\alfredo\documents\visual studio 2015\Projects\ParkingLotPractice\ParkingLotPractice\obj\Debug\ParkingLotPractice.exe
 c:\users\alfredo\documents\visual studio 2015\Projects\ParkingLotPractice\ParkingLotPractice\obj\Debug\ParkingLotPractice.pdb
+C:\Users\Alfredo V\Desktop\ParkingLotPractice-master\ParkingLotPractice\bin\Debug\ParkingLotPractice.exe.config
+C:\Users\Alfredo V\Desktop\ParkingLotPractice-master\ParkingLotPractice\bin\Debug\ParkingLotPractice.exe
+C:\Users\Alfredo V\Desktop\ParkingLotPractice-master\ParkingLotPractice\bin\Debug\ParkingLotPractice.pdb
+C:\Users\Alfredo V\Desktop\ParkingLotPractice-master\ParkingLotPractice\obj\Debug\ParkingLotPractice.exe
+C:\Users\Alfredo V\Desktop\ParkingLotPractice-master\ParkingLotPractice\obj\Debug\ParkingLotPractice.pdb
+C:\Users\Alfredo V\Desktop\ParkingLotPractice-master\ParkingLotPractice\obj\Debug\ParkingLotPractice.csprojResolveAssemblyReference.cache
